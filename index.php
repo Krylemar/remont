@@ -13,58 +13,49 @@
 			<th>Таблици\Операции</th>
 			<th>Преглед</th>
 			<th>Създай</th>
-			<th>Редактирай</th>
-			<th>Изтрий</th>
 		</tr>
 		<tr>
 			<th>Тип услуга</th>
-			<th><a href="service_groups/index.php">Тук</a></th>
-			<th><a href="service_groups/create.php">Тук</a></th>
-			<th></th>
-			<th></th>
+			<td><button type="button" onclick="redirectToPage('service_groups','index')">Преглед</button></td>
+			<td><button type="button" onclick="redirectToPage('service_groups','create')">Създай</button></td>
 		</tr>
 		<tr>
 			<th>Услуги</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<th>Позиции на служител</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<td><button type="button" onclick="redirectToPage('employee_positions','index')">Преглед</button></td>
+			<td><button type="button" onclick="redirectToPage('employee_positions','create')">Създай</button></td>
 		</tr>
 		<tr>
 			<th>Служители</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<th>Клиенти</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<th>Ремонти</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<th>Ремонти на клиент</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<td></td>
+			<td></td>
 		</tr>
 	</table>
+
+	<script type="text/javascript">
+		function redirectToPage(table,page) {
+			window.location.href = table+"/"+page+".php";
+		};
+	</script>
+
 </body>
 </html>
