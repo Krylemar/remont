@@ -15,7 +15,10 @@
 		include '../config.php';
 		if (isset($_POST['create'])) {
 			$name = $_POST['name'];
-
+			if ($name == "") {
+				echo "<script> alert(\"Грешка при създаване на нова група: Групата не може да е празна!\")</script>";
+				die();
+			}
 	        try {
 	      		$dbConn->query("INSERT INTO `Employee_positions`(name) VALUES ('$name')");
 	      		header("Location: index.php");
