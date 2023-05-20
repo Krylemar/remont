@@ -2,23 +2,7 @@
 	include 'config.php';
 
 
-	// Check if database exists
-	$result = $dbConn->query("SHOW DATABASES");
-	$databaseExists = false;
-	while ($row = $result->fetch_array()) {
-	    if ($row[0] == $dbName) {
-	        $databaseExists = true;
-	        break;
-	    }
-	}
 
-	// If doesn't exist, create
-	if (!$databaseExists) {
-	    $sql = "CREATE DATABASE ".$dbName;
-	    $dbConn->query($sql);
-	}
-
-	$dbConn->select_db($dbName);
 
 	// CREATE TABLES
 
@@ -28,7 +12,7 @@
 	} catch (Exception $e){
 		$sql = "CREATE TABLE Employee_positions (
 			id_position INTEGER PRIMARY KEY AUTO_INCREMENT,
-			name VARCHAR(30) NOT NULL);";
+			name VARCHAR(30) NOT NULL UNIQUE);";
 		$dbConn->query($sql);
 	}
 
@@ -54,7 +38,7 @@
 	} catch (Exception $e) {
 		$sql = "CREATE TABLE Service_groups (
 			id_group INTEGER PRIMARY KEY AUTO_INCREMENT,
-			name VARCHAR(30) NOT NULL);";
+			name VARCHAR(30) NOT NULL UNIQUE);";
 		$dbConn->query($sql);
 	}
 
