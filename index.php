@@ -36,8 +36,8 @@
 		</tr>
 		<tr>
 			<th>Клиенти</th>
-			<td></td>
-			<td></td>
+			<td><button type="button" onclick="redirectToPage('clients','index')">Преглед</button></td>
+			<td><button type="button" onclick="redirectToPage('clients','create')">Създай</button></td>
 		</tr>
 		<tr>
 			<th>Ремонти</th>
