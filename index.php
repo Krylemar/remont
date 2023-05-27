@@ -41,8 +41,8 @@
 		</tr>
 		<tr>
 			<th>Ремонти</th>
-			<td></td>
-			<td></td>
+			<td><button type="button" onclick="redirectToPage('repairs','index')">Преглед</button></td>
+			<td><button type="button" onclick="redirectToPage('repairs','create')">Създай</button></td>
 		</tr>
 		<tr>
 			<th>Ремонти на клиент</th>
