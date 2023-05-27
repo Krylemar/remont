@@ -48,6 +48,7 @@
 	} catch (Exception $e){
 		$sql = "CREATE TABLE Services (
 			id_service INTEGER PRIMARY KEY AUTO_INCREMENT,
+			name VARCHAR(50) NOT NULL,
 			price DOUBLE(8,2) NOT NULL,
 			service_group INTEGER,
 			FOREIGN KEY (service_group) REFERENCES Service_groups(id_group));";
