@@ -27,8 +27,8 @@
 			last_name VARCHAR(30) NOT NULL,
 			phone VARCHAR(20) NOT NULL,
 			email VARCHAR(50) NOT NULL,
-			position INTEGER NOT NULL,
-			FOREIGN KEY (position) REFERENCES Employee_positions(id_position));";
+			position INTEGER DEFAULT NULL,
+			FOREIGN KEY (position) REFERENCES Employee_positions(id_position) ON DELETE SET NULL);";
 		$dbConn->query($sql);
 	}
 
@@ -50,8 +50,8 @@
 			id_service INTEGER PRIMARY KEY AUTO_INCREMENT,
 			name VARCHAR(50) NOT NULL,
 			price DOUBLE(8,2) NOT NULL,
-			service_group INTEGER,
-			FOREIGN KEY (service_group) REFERENCES Service_groups(id_group));";
+			service_group INTEGER DEFAULT NULL,
+			FOREIGN KEY (service_group) REFERENCES Service_groups(id_group) ON DELETE SET NULL);";
 		$dbConn->query($sql);
 	}
 
@@ -79,9 +79,9 @@
 			`date` DATE NOT NULL,
 			price DOUBLE(8,2) NOT NULL,
 			client INTEGER NOT NULL,
-			employee INTEGER NOT NULL,
-			FOREIGN KEY (client) REFERENCES Clients(id_client),
-			FOREIGN KEY (employee) REFERENCES Employees(id_employee));";
+			employee INTEGER DEFAULT NULL,
+			FOREIGN KEY (client) REFERENCES Clients(id_client) ON DELETE CASCADE,
+			FOREIGN KEY (employee) REFERENCES Employees(id_employee) ON DELETE SET NULL);";
 		$dbConn->query($sql);
 	}
 
@@ -90,11 +90,11 @@
 	$result = $dbConn->query("SELECT 1 FROM Repair_services LIMIT 1");
 	} catch (Exception $e) {
 		$sql = "CREATE TABLE Repair_services(
-			repair_id INTEGER,
-			service_id INTEGER,
-			PRIMARY KEY(repair_id,service_id),
-			FOREIGN KEY (repair_id) REFERENCES Repairs(id_repair),
-			FOREIGN KEY (service_id) REFERENCES Services(id_service));";
+			repair_id INTEGER DEFAULT NULL,
+			service_id INTEGER DEFAULT NULL,
+			UNIQUE(repair_id,service_id),
+			FOREIGN KEY (repair_id) REFERENCES Repairs(id_repair) ON DELETE CASCADE,
+			FOREIGN KEY (service_id) REFERENCES Services(id_service) ON DELETE SET NULL);";
 		$dbConn->query($sql);
 	}
 
