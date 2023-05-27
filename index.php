@@ -31,8 +31,8 @@
 		</tr>
 		<tr>
 			<th>Служители</th>
-			<td></td>
-			<td></td>
+			<td><button type="button" onclick="redirectToPage('employees','index')">Преглед</button></td>
+			<td><button type="button" onclick="redirectToPage('employees','create')">Създай</button></td>
 		</tr>
 		<tr>
 			<th>Клиенти</th>
