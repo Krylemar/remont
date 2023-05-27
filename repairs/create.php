@@ -50,12 +50,17 @@
 			$client = $_POST['client'];
 			$employee = $_POST['employee'];
 			$price = 0.00;
+
 			$dbConn->query("INSERT INTO `Repairs` (date, price, client, employee) VALUES ('$date','$price','$client','$employee')");
-			$last_id = $dbConn->insert_id;
+
+			$last_id = $dbConn->insert_id; // id of just inserted entry
+
+			// Insert all services of this repair in repair_services
 			foreach ($services_ids as $key => $value) {
 				$dbConn->query("INSERT INTO `Repair_services` (repair_id,service_id) VALUES ('$last_id','$value')");	
 			}
 
+			// Sum total of all services
 			$sql = "SELECT SUM(s.price) AS total_price
 					FROM `Repair_services` AS rs
 					JOIN `Services` AS s ON rs.service_id = s.id_service
@@ -66,6 +71,7 @@
 				$price = $row['total_price'];
 			}
 
+			// Write sum in corresponding entry
 			$dbConn->query("UPDATE `Repairs` SET price = $price WHERE id_repair = $last_id");
 			
 			header("Location: index.php");
