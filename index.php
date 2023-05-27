@@ -21,8 +21,8 @@
 		</tr>
 		<tr>
 			<th>Услуги</th>
-			<td></td>
-			<td></td>
+			<td><button type="button" onclick="redirectToPage('services','index')">Преглед</button></td>
+			<td><button type="button" onclick="redirectToPage('services','create')">Създай</button></td>
 		</tr>
 		<tr>
 			<th>Позиции на служител</th>
