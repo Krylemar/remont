@@ -37,7 +37,7 @@
 			while ($row = mysqli_fetch_assoc($result)) {
 				$id = $row['id_group'];
 				echo "<tr>\n\t\t";
-				echo "<th>".$row['name']."</th>\n\t\t";
+				echo "<td>".$row['name']."</td>\n\t\t";
 				echo '<td><button class="button" onclick="redirectToSubPageWithId(\'update\','.$id.')">Редактирай</button></td>'."\n\t\t";
 				echo '<td><button class="button" onclick="redirectToSubPageWithId(\'delete\','.$id.')">Изтрий</button></td>'."\n\t\t";
 				echo "</tr>\n\t\t";

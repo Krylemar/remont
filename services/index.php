@@ -41,9 +41,9 @@
 				$id = $row['id_service'];
 
 				echo "<tr>";
-				echo "<th>".$row['s_name']."</th>";
-				echo "<th>".$row['price']."</th>";
-				echo "<th>".$row['g_name']."</th>";
+				echo "<td>".$row['s_name']."</td>";
+				echo "<td>".$row['price']."</td>";
+				echo "<td>".$row['g_name']."</td>";
 				echo '<td><button class="button" onclick="redirectToSubPageWithId(\'update\','.$id.')">Редактирай</button></td>'."\n\t\t";
 				echo '<td><button class="button" onclick="redirectToSubPageWithId(\'delete\','.$id.')">Изтрий</button></td>'."\n\t\t";
 				echo "</tr>";
