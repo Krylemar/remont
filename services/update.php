@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link rel="stylesheet" href="../style.css">
 	<?php 
 	include '../config.php';
 	global $id;
@@ -17,7 +18,25 @@
 	 ?>
 </head>
 <body>
-	<form method="POST" action="<?php $_PHP_SELF ?>">
+	<section class="top-nav">
+    <div>
+        <h1 onclick="redirectToSubPageRelative('index')">Сами строй</h1>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+    </label>
+    <ul class="menu">
+            <li><button type="button" onclick="redirectToPage('../service_groups','index')">Категории услуги</button></li>
+            <li><button type="button" onclick="redirectToPage('../services','index')">Услуги</button></li>
+            <li><button type="button" onclick="redirectToPage('../employee_positions','index')">Позиции на служители</button></li>
+            <li><button type="button" onclick="redirectToPage('../employees','index')">Служители</button></li>
+            <li><button type="button" onclick="redirectToPage('../clients','index')">Клиенти</button></li>
+            <li><button type="button" onclick="redirectToPage('../repairs','index')">Ремонти</button></li>
+        </ul>
+	</section>
+	<form method="POST" action="<?php $_PHP_SELF ?>" id="msform">
+		<fieldset>
 		<?php include '../config.php'; 
 			echo "<label>Име на услуга</label><input type='text' name='name' value='$name'><br>";
 			echo "<label>Цена на услуга</label><input type='number' step='0.01' name='price' value='$price'><br>";
@@ -35,6 +54,7 @@
 			echo "</select>";
 			?>
 		<input type="submit" name="update" value="Редактирай">
+		</fieldset>
 	</form>
 	<?php  
 	if (isset($_POST['update'])) {
@@ -51,5 +71,6 @@
 	}
 
 ?>
+<script src="../functions.js"></script>
 </body>
 </html>
