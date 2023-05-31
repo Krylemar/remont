@@ -198,12 +198,14 @@ tr{
 tr:hover {background-color: coral;}
 
 td{
-    justify-self: space-evenly;
+  justify-self: space-evenly;
+  color: black;
 }
 
 th{
   justify-self: space-evenly;
   color: black;
+  font-size: 24px;
 }
 
 h1{

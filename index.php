@@ -10,7 +10,7 @@
 <body>
 	<section class="top-nav">
         <div>
-            <h1>Сами строй</h1>
+            <h1 onclick="redirectToSubPageRelative('index')">Сами строй</h1>
         </div>
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
@@ -28,37 +28,37 @@
     <div class="page-main">
 	<table >
 		<tr>
-			<th>Таблици\Операции</th>
+			<th>Таблици</th>
 			<th>Преглед</th>
 			<th>Създай</th>
 		</tr>
 		<tr>
-			<th>Категории услуги</th>
+			<td>Категории услуги</td>
 			<td><button class="button" type="button" onclick="redirectToPage('service_groups','index')">Преглед</button></td>
 			<td><button class="button" type="button" onclick="redirectToPage('service_groups','create')">Създай</button></td>
 		</tr>
 		<tr>
-			<th>Услуги</th>
+			<td>Услуги</td>
 			<td><button class="button" type="button" onclick="redirectToPage('services','index')">Преглед</button></td>
 			<td><button class="button" type="button" onclick="redirectToPage('services','create')">Създай</button></td>
 		</tr>
 		<tr>
-			<th>Позиции на служител</th>
+			<td>Позиции на служител</td>
 			<td><button class="button" type="button" onclick="redirectToPage('employee_positions','index')">Преглед</button></td>
 			<td><button class="button" type="button" onclick="redirectToPage('employee_positions','create')">Създай</button></td>
 		</tr>
 		<tr>
-			<th>Служители</th>
+			<td>Служители</td>
 			<td><button class="button" type="button" onclick="redirectToPage('employees','index')">Преглед</button></td>
 			<td><button class="button" type="button" onclick="redirectToPage('employees','create')">Създай</button></td>
 		</tr>
 		<tr>
-			<th>Клиенти</th>
+			<td>Клиенти</td>
 			<td><button class="button" type="button" onclick="redirectToPage('clients','index')">Преглед</button></td>
 			<td><button class="button" type="button" onclick="redirectToPage('clients','create')">Създай</button></td>
 		</tr>
 		<tr>
-			<th>Ремонти</th>
+			<td>Ремонти</td>
 			<td><button class="button" type="button" onclick="redirectToPage('repairs','index')">Преглед</button></td>
 			<td><button class="button" type="button" onclick="redirectToPage('repairs','create')">Създай</button></td>
 		</tr>

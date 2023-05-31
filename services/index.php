@@ -9,7 +9,7 @@
 <body>
 	<section class="top-nav">
         <div>
-            <h1>Сами строй</h1>
+            <h1 onclick="redirectToSubPageRelative('index')">Сами строй</h1>
         </div>
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
