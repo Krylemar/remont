@@ -34,7 +34,7 @@
             <li><button type="button" onclick="redirectToPage('../clients','index')">Клиенти</button></li>
             <li><button type="button" onclick="redirectToPage('../repairs','index')">Ремонти</button></li>
         </ul>
-</section>
+	</section>
 	<form method="POST" action="<?php $_PHP_SELF ?>" id="msform">
 		<fieldset>
 		<?php include '../config.php'; 

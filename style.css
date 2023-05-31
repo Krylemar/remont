@@ -21,7 +21,7 @@ a:visited{
 }
 
 .page-main{
-  background-color: rgba(220, 220, 220, 0.90);
+  background-color: rgba(220, 220, 220, 0.55);
   margin-left: 20%;
   margin-right: 20%;
   display: flex;
