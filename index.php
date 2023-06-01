@@ -62,6 +62,30 @@
 			<td><button class="button" type="button" onclick="redirectToPage('repairs','index')">Преглед</button></td>
 			<td><button class="button" type="button" onclick="redirectToPage('repairs','create')">Създай</button></td>
 		</tr>
+		<tr>
+			<th>Заявки</th>
+			<th>Преглед</th>
+		</tr>
+		<tr>
+			<td>Ремонти за определен период</td>
+			<td><button class="button" type="button" onclick="redirectToPage('queries','repairs-period')">Преглед</button></td>
+		</tr>
+		<tr>
+			<td>Ремонти на служител</td>
+			<td><button class="button" type="button" onclick="redirectToPage('queries','repairs-by-employee')">Преглед</button></td>
+		</tr>
+		<tr>
+			<td>Ремонти на клиент</td>
+			<td><button class="button" type="button" onclick="redirectToPage('queries','repairs-by-client')">Преглед</button></td>
+		</tr>
+		<tr>
+			<td>Топ 5 служителя по брой ремонти</td>
+			<td><button class="button" type="button" onclick="redirectToPage('queries','count-of-repairs-by-employee')">Преглед</button></td>
+		</tr>
+		<tr>
+			<td>Най-евтин/Най-скъп ремонт</td>
+			<td><button class="button" type="button" onclick="redirectToPage('queries','cheap-expensive')">Преглед</button></td>
+		</tr>
 	</table>
 	</div>
 	<script src="functions.js"></script>
